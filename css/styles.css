@@ -119,11 +119,28 @@ img {
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #2e2f42;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .nav-link:hover,
 .nav-link:focus {
     color: #404bbf;
+}
+
+.link-psevdo {
+    position: relative;
+    background: #404bbf;
+}
+
+.link-psevdo::after {
+    content: '';
+    border-radius: 2px;
+    width: 48px;
+    height: 4px;
+    background: #404bbf;
+    position: absolute;
+    left: 0;
+    bottom: -1px;
 }
 
 .header-contacts {
@@ -151,12 +168,23 @@ img {
     color: #404bbf;
 }
 
+
 /* #region hero image */
 
 
 .hero {
     background-color: #2e2f42;
     padding: 188px 0;
+    background-image: linear-gradient(to bottom,
+            rgba(46, 47, 66, 0.7),
+            rgba(46, 47, 66, 0.7)), url(../images/bg-img/people-office.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    width: 1440px;
+    height: 600px;
+    margin: auto;
+
 }
 
 .hero-title {
